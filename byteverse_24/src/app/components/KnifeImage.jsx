@@ -70,7 +70,6 @@ const KnifeImage = () => {
     } else {
       setAnimationState1("initial");
     }
-    console.log("Animation 1 complete. Current state:", animationState1);
   };
   const handleAnimationComplete2 = () => {
     if (animationState2 === "initial") {
@@ -80,7 +79,6 @@ const KnifeImage = () => {
     } else {
       setAnimationState2("initial");
     }
-    console.log("Animation 2 complete. Current state:", animationState2);
   };
 
   useEffect(() => {
@@ -93,7 +91,7 @@ const KnifeImage = () => {
       <Image
         src="/byteverse/GroupFace.svg"
         alt="Head Logo"
-        className="dark:invert p-2 absolute top-[2px] left-2 "
+        className=" p-2 absolute top-[2px] left-2 "
         width={156}
         height={133}
       />

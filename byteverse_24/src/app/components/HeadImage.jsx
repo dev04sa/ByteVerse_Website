@@ -7,7 +7,7 @@ const HeadImage = () => {
          <Image
               src="/GroupFace.svg"
               alt="Head Logo"
-              className="dark:invert"
+              
               width={156}
               height={133}
              
