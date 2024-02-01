@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Montserrat, Inter, Hina_Mincho } from "next/font/google";
+import Link from "next/link";
 let insta = "/byteverse/footer/Instagram.svg";
 let twit = "/byteverse/footer/TwitterX.svg";
 let yt = "/byteverse/footer/YouTube.svg";
@@ -73,10 +74,29 @@ const FooterSection = () => {
             </div>
           </div>
           <div className="flex justify-center gap-10 items-center mt-5">
-            <img src={insta} className=" h-5 " />
-            <img src={twit} className="  h-5 " />
-            <img src={lin} className=" h-6 " />
-            <img src={yt} className=" h-5 " />
+            <Link
+              href={
+                "https://www.instagram.com/hackslash_nitp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              }
+              target="_blank"
+            >
+              <img src={insta} className=" h-5 " />
+            </Link>
+            <Link href={"https://twitter.com/hackslash_nitp"} target="_blank">
+              <img src={twit} className="  h-5 " />
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/company/hackslash/mycompany/"}
+              target="_blank"
+            >
+              <img src={lin} className=" h-6 " />
+            </Link>
+            <Link
+              href={"https://www.youtube.com/@HackSlashDevelopersClub"}
+              target="_blank"
+            >
+              <img src={yt} className=" h-5 " />
+            </Link>
           </div>
         </div>
         <div className=" justify-self-center lg:self-end">
