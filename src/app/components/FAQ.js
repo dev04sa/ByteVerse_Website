@@ -1,5 +1,3 @@
-
-
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -31,9 +29,15 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="relative min-h-screen flex justify-center items-center" style={{
-      background: 'linear-gradient(180deg, rgb(114,0,0) 0%,  rgb(172,0,0) 70%, #9f0b0b 100%)'
-    }} >
+    <div
+      className="relative min-h-screen flex justify-center items-center"
+      style={{
+        background:
+          "linear-gradient(190.02deg, #000000 -6.34%, rgba(0, 0, 0, 0) 76.66%)",
+        // background:
+        //   "linear-gradient(180deg, rgb(114,0,0) 0%,  rgb(172,0,0) 70%, #9f0b0b 100%)",
+      }}
+    >
       <div className="absolute inset-0 z-0 flex justify-center items-center">
         <Image src={"/byteverse/sword.png"} height={500} width={500} />
       </div>
