@@ -111,10 +111,10 @@ const FAQ = () => {
 
   return (
     <div className="relative min-h-screen bg-[#4A0000] flex justify-center items-center">
-      <div className="absolute inset-0 flex justify-center items-center">
+      <div className="absolute inset-0 z-0 flex justify-center items-center">
         <Image src={"/byteverse/sword.png"} height={500} width={500} />
       </div>
-      <div className="w-full max-w-[1000px] h-auto flex flex-col md:flex-row justify-evenly items-center  p-5">
+      <div className="z-10 w-full max-w-[1000px] h-auto flex flex-col md:flex-row justify-evenly items-center  p-5">
         <div className="w-full p-4  md:w-[300px]  flex flex-col justify-center items-start mb-6 md:mb-0 text-[#DEB889]  ">
           <h2 className="text-3xl mb-6 font-bold ">
             Frequently Asked Questions
@@ -128,7 +128,7 @@ const FAQ = () => {
         </div>
         <div className="p-4 w-[400px]  rounded-lg">
           {faqs.map((faq) => (
-            <Accordion title={faq.query} answer={faq.ans} />
+            <Accordion key={faq.id} title={faq.query} answer={faq.ans} />
           ))}
         </div>
       </div>
