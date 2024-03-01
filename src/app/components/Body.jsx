@@ -5,6 +5,24 @@ import PaperRoll from "@/../public/PaperRoll.svg";
 import CountdownUI from "./countdownUI";
 
 export default function Body() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+
+  if (isMobile) {
+    return (
+      <div className="flex flex-col gap-6 z-40 xl:w-3/4 w-4/5 lg:text-lg text-sm font-lato mt-3">
+        <div className="flex flex-col gap-6 items-center justify-center">
+          <CountdownUI />
+          <div
+            className="apply-button"
+            data-hackathon-slug="byteversenitp"
+            data-button-theme="dark"
+            style={{ height: "44px", width: "312px" }}
+          ></div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <motion.div
       initial={{ y: 500 }}

@@ -23,6 +23,45 @@ export default function Hero() {
       document.body.removeChild(script);
     };
   }, []);
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
+
+  if (isMobile) {
+    return (
+      <main className="relative flex min-h-screen overflow-hidden flex-col items-center justify-center px-24">
+        <HomeNavigation />
+        <Image
+          alt="bg-1"
+          src={bg1}
+          quality={100}
+          fill
+          sizes="100vh 100vw"
+          className="object-cover"
+          style={{
+            zIndex: "5",
+            width: "100%",
+          }}
+        />
+        <Image
+          alt="bg-2"
+          src={bg2}
+          quality={100}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+            mixBlendMode: "color-burn",
+            zIndex: "5",
+          }}
+        />
+        <Baadal />
+        <div className="md:-translate-y-2 -translate-y-20 w-5/6 flex flex-col items-center justify-center gap-5 absolute z-50">
+          <Logo />
+          <Body />
+        </div>
+        <Ground />
+      </main>
+    );
+  }
 
   return (
     <main className="relative flex min-h-screen overflow-hidden flex-col items-center justify-center px-24">
@@ -65,3 +104,4 @@ export default function Hero() {
     </main>
   );
 }
+
